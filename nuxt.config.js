@@ -1,39 +1,36 @@
 module.exports = {
-  /*
+	/*
   ** Headers of the page
   */
-  head: {
-    title: 'filipposmm',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'filipposmm personal website' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
-  /*
+	head: {
+		title: 'Filippo Sotto Mayor Matoso',
+		meta: [
+			{ charset: 'utf-8' },
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+			{ hid: 'description', name: 'description', content: 'filipposmm personal website' }
+		],
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+	},
+	/*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
-  /*
+	loading: { color: '#6e0099' },
+	/*
   ** Build configuration
   */
-  build: {
-    /*
+	build: {
+		/*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
+		extend(config, { isDev, isClient }) {
+			if (isDev && isClient) {
+				config.module.rules.push({
+					enforce: 'pre',
+					test: /\.(js|vue)$/,
+					loader: 'eslint-loader',
+					exclude: /(node_modules)/
+				})
+			}
+		}
+	}
 }
-

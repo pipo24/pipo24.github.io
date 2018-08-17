@@ -40,7 +40,7 @@
     }
   }
   .word1 {
-    color: #dc006c;
+    color: #6e0099;
     display: inline-block;
     z-index: 10;
     &:before {
