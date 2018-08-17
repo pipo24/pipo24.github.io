@@ -1,38 +1,18 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
-      <h1 class="title">
-        filipposmm
+      <h1 class="logo">
+        <span class="word1">Filippo</span>
+        <span class="word2">SMM</span>
       </h1>
-      <h2 class="subtitle">
-        filipposmm personal website
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
-export default {
-  components: {
-    AppLogo
-  }
-}
 </script>
 
-<style>
+<style lang="scss">
 .container {
   min-height: 100vh;
   display: flex;
@@ -41,25 +21,57 @@ export default {
   text-align: center;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.logo {
+  font: 84px 'Arial Narrow', sans-serif;
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  span {
+  position: relative;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-width: 32px;/* makes a nice, big 64px square */
+      border-style: solid;
+      border-color: transparent;
+      height: 0;
+      z-index: 10;
+    }
+  }
+  .word1 {
+    color: #dc006c;
+    display: inline-block;
+    z-index: 10;
+    &:before {
+      right: -5px;
+      bottom: -5px;
+      border-bottom-color: #ffffff;
+      border-right-color: #ffffff;
+    }
+    &:after {
+      left: -5px;
+      top: -5px;
+      border-top-color: #ffffff;
+      border-left-color: #ffffff;
+    }
+  }
+  .word2 {
+    color: #000000;
+    z-index: 0;
+    &:before {
+      left: -5px;
+      top: -5px;
+      border-top-color: #ffffff;
+      border-left-color: #ffffff;
+    }
+    &:after {
+      right: -5px;
+      bottom: -5px;
+      border-bottom-color: #ffffff;
+      border-right-color: #ffffff;
+    }
+  }
 }
 </style>
 
