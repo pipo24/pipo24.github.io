@@ -18,6 +18,9 @@
         </a>
       </div>
     </div>
+    <a 
+      href="/about" 
+      class="about-link">about</a>
   </section>
 </template>
 
@@ -43,14 +46,6 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .logo {
   font: 84px 'Arial Narrow', sans-serif;
   color: #fefefe;
